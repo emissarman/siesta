@@ -262,7 +262,7 @@ open class ResourceStatusOverlay: UIView, ResourceObserver
         updateDisplay()
         }
 
-    private func showError(_ error: RequestError)
+    open func showError(_ error: RequestError)
         {
         isHidden = false
         errorView?.isHidden = false
@@ -270,7 +270,7 @@ open class ResourceStatusOverlay: UIView, ResourceObserver
         errorDetail?.text = error.userMessage
         }
 
-    private func showLoading()
+    open func showLoading()
         {
         isHidden = false
         errorView?.isHidden = true
@@ -279,7 +279,7 @@ open class ResourceStatusOverlay: UIView, ResourceObserver
         UIView.animate(withDuration: 0.7) { self.loadingIndicator?.alpha = 1 }
         }
 
-    private func showSuccess()
+    open func showSuccess()
         {
         loadingIndicator?.isHidden = true
         isHidden = true
