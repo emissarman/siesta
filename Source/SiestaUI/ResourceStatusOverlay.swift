@@ -42,7 +42,7 @@ open class ResourceStatusOverlay: UIView, ResourceObserver
     /// Allow user to retry a failed request.
     @IBOutlet open var retryButton: UIButton!
 
-    private weak var parentVC: UIViewController?
+    public weak var parentVC: UIViewController?
     private var observedResources = [Resource]()
     private var manualLoadsInProgress = 0
 
